@@ -1,0 +1,113 @@
+=== DAILY STOCK RECOMMENDATIONS ===
+Generated at: 2025-09-16T22:50:03.478583
+
+Symbol: AAPL (Apple Inc.)
+Current Price: $174.30
+Previous Close: $138.49
+Recommendation: HOLD
+Target Price: $174.30
+Stop Loss: $165.58
+Risk Level: 5.0/10
+Reasoning: Based on recent news analysis: Mixed sentiment in recent news. Analyzed 0 relevant news articles. Mixed signals suggest maintaining current position.
+Key Keywords: 
+---
+
+Symbol: MSFT (Microsoft Corporation)
+Current Price: $233.89
+Previous Close: $121.42
+Recommendation: HOLD
+Target Price: $233.89
+Stop Loss: $222.19
+Risk Level: 5.0/10
+Reasoning: Based on recent news analysis: Mixed sentiment in recent news. Analyzed 0 relevant news articles. Mixed signals suggest maintaining current position.
+Key Keywords: 
+---
+
+Symbol: GOOGL (Alphabet Inc.)
+Current Price: $236.28
+Previous Close: $242.24
+Recommendation: HOLD
+Target Price: $236.28
+Stop Loss: $224.46
+Risk Level: 5.0/10
+Reasoning: Based on recent news analysis: Mixed sentiment in recent news. Analyzed 0 relevant news articles. Mixed signals suggest maintaining current position.
+Key Keywords: 
+---
+
+Symbol: AMZN (Amazon.com Inc.)
+Current Price: $157.77
+Previous Close: $118.87
+Recommendation: HOLD
+Target Price: $157.77
+Stop Loss: $149.88
+Risk Level: 5.0/10
+Reasoning: Based on recent news analysis: Mixed sentiment in recent news. Analyzed 0 relevant news articles. Mixed signals suggest maintaining current position.
+Key Keywords: 
+---
+
+Symbol: TSLA (Tesla Inc.)
+Current Price: $138.11
+Previous Close: $187.11
+Recommendation: HOLD
+Target Price: $138.11
+Stop Loss: $131.21
+Risk Level: 5.0/10
+Reasoning: Based on recent news analysis: Mixed sentiment in recent news. Analyzed 0 relevant news articles. Mixed signals suggest maintaining current position.
+Key Keywords: 
+---
+
+Symbol: META (Meta Platforms Inc.)
+Current Price: $268.86
+Previous Close: $288.67
+Recommendation: HOLD
+Target Price: $268.86
+Stop Loss: $255.42
+Risk Level: 5.0/10
+Reasoning: Based on recent news analysis: Mixed sentiment in recent news. Analyzed 1 relevant news articles. Mixed signals suggest maintaining current position.
+Key Keywords: 
+---
+
+Symbol: NVDA (NVIDIA Corporation)
+Current Price: $294.87
+Previous Close: $239.29
+Recommendation: HOLD
+Target Price: $294.87
+Stop Loss: $280.13
+Risk Level: 5.0/10
+Reasoning: Based on recent news analysis: Mixed sentiment in recent news. Analyzed 0 relevant news articles. Mixed signals suggest maintaining current position.
+Key Keywords: 
+---
+
+Symbol: NFLX (Netflix Inc.)
+Current Price: $267.65
+Previous Close: $217.55
+Recommendation: HOLD
+Target Price: $267.65
+Stop Loss: $254.27
+Risk Level: 5.0/10
+Reasoning: Based on recent news analysis: Mixed sentiment in recent news. Analyzed 0 relevant news articles. Mixed signals suggest maintaining current position.
+Key Keywords: 
+---
+
+Symbol: AMD (Advanced Micro Devices Inc.)
+Current Price: $188.96
+Previous Close: $187.48
+Recommendation: HOLD
+Target Price: $188.96
+Stop Loss: $179.52
+Risk Level: 5.0/10
+Reasoning: Based on recent news analysis: Mixed sentiment in recent news. Analyzed 0 relevant news articles. Mixed signals suggest maintaining current position.
+Key Keywords: 
+---
+
+Symbol: INTC (Intel Corporation)
+Current Price: $256.68
+Previous Close: $132.34
+Recommendation: HOLD
+Target Price: $256.68
+Stop Loss: $243.84
+Risk Level: 5.0/10
+Reasoning: Based on recent news analysis: Mixed sentiment in recent news. Analyzed 0 relevant news articles. Mixed signals suggest maintaining current position.
+Key Keywords: 
+---
+

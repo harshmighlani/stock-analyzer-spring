@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Analyzer Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <i class="fas fa-chart-line"></i>
+                    <h1>Stock Analyzer Dashboard</h1>
+                </div>
+                <div class="header-actions">
+                    <button id="refreshBtn" class="btn btn-primary">
+                        <i class="fas fa-sync-alt"></i>
+                        Refresh Data
+                    </button>
+                    <button id="triggerAnalysisBtn" class="btn btn-secondary">
+                        <i class="fas fa-play"></i>
+                        Trigger Analysis
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Status Cards -->
+            <section class="status-cards">
+                <div class="card status-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-chart-bar"></i> Total Analyzed</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="metric-value" id="totalAnalyzed">-</div>
+                        <div class="metric-label">Stocks Analyzed</div>
+                    </div>
+                </div>
+
+                <div class="card status-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-clock"></i> Last Update</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="metric-value" id="lastUpdate">-</div>
+                        <div class="metric-label">Analysis Time</div>
+                    </div>
+                </div>
+
+                <div class="card status-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-star"></i> Strong Buys</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="metric-value" id="strongBuys">-</div>
+                        <div class="metric-label">Recommendations</div>
+                    </div>
+                </div>
+
+                <div class="card status-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-exclamation-triangle"></i> High Risk</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="metric-value" id="highRisk">-</div>
+                        <div class="metric-label">Stocks</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Charts Section -->
+            <section class="charts-section">
+                <div class="card chart-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-pie-chart"></i> Recommendation Distribution</h3>
+                    </div>
+                    <div class="card-content">
+                        <canvas id="recommendationChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="card chart-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-shield-alt"></i> Risk Distribution</h3>
+                    </div>
+                    <div class="card-content">
+                        <canvas id="riskChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recommendations Table -->
+            <section class="recommendations-section">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-list"></i> Latest Recommendations</h3>
+                        <div class="card-actions">
+                            <select id="filterRecommendation" class="filter-select">
+                                <option value="all">All Recommendations</option>
+                                <option value="STRONG_BUY">Strong Buy</option>
+                                <option value="BUY">Buy</option>
+                                <option value="HOLD">Hold</option>
+                                <option value="SELL">Sell</option>
+                                <option value="STRONG_SELL">Strong Sell</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <div class="table-container">
+                            <table class="recommendations-table">
+                                <thead>
+                                    <tr>
+                                        <th>Symbol</th>
+                                        <th>Company</th>
+                                        <th>Current Price</th>
+                                        <th>Target Price</th>
+                                        <th>Recommendation</th>
+                                        <th>Risk Level</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="recommendationsTableBody">
+                                    <tr>
+                                        <td colspan="7" class="loading-row">
+                                            <i class="fas fa-spinner fa-spin"></i>
+                                            Loading recommendations...
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Individual Stock Analysis -->
+            <section class="analysis-section">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-search"></i> Analyze Individual Stock</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="analysis-form">
+                            <div class="input-group">
+                                <input type="text" id="stockSymbol" placeholder="Enter stock symbol (e.g., AAPL)"
+                                    class="form-input">
+                                <button id="analyzeBtn" class="btn btn-primary">
+                                    <i class="fas fa-search"></i>
+                                    Analyze
+                                </button>
+                            </div>
+                        </div>
+                        <div id="analysisResult" class="analysis-result hidden">
+                            <!-- Analysis results will be populated here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Loading Overlay -->
+        <div id="loadingOverlay" class="loading-overlay hidden">
+            <div class="loading-spinner">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Loading data...</p>
+            </div>
+        </div>
+
+        <!-- Toast Notifications -->
+        <div id="toastContainer" class="toast-container"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
