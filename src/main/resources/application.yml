@@ -1,0 +1,12 @@
+server:
+  port: 8085
+
+ollama:
+  baseUrl: http://localhost:11434
+  model: llama3.1:8b
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
