@@ -34,7 +34,7 @@ Spring Boot service that fetches recent market prices for a stock symbol and ask
 
 ## Quick start (local)
 ```bash
-cd /Users/harmighl1/cursor-poc/stock-analyzer-spring
+cd /Users/cursor-poc/stock-analyzer-spring
 gradle bootRun
 ```
 
@@ -203,7 +203,7 @@ curl http://localhost:11434/api/tags
 ## Run with Docker
 Build image and run the service container:
 ```bash
-cd /Users/harmighl1/cursor-poc/stock-analyzer-spring
+cd /Users/cursor-poc/stock-analyzer-spring
 docker build -t stock-analyzer-spring .
 docker run --rm -p 8085:8085 \
   -e OLLAMA_BASEURL=http://host.docker.internal:11434 \
